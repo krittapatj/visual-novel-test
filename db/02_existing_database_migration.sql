@@ -1,0 +1,6 @@
+-- ONLY for existing Day 1-4 databases. Inspect columns before running.
+-- Ensure users.user_id and projects.project_id are BIGINT (signed) as in the supplied project.
+-- If scenes exists already, add only missing columns, using your SQL console.
+-- Example (skip any statement for a column that already exists):
+-- ALTER TABLE scenes ADD COLUMN text TEXT NULL;
+-- For a clean install, prefer 01_schema.sql in a NEW empty database.

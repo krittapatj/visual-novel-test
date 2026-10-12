@@ -27,7 +27,7 @@ function Login() {
       localStorage.setItem("user", JSON.stringify(data.user));
 
       // Login สำเร็จ
-      navigate("/welcome");
+      navigate("/dashboard", { replace: true });
     } catch (error) {
       setError(error.message);
     } finally {

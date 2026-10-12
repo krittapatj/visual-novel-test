@@ -3,7 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import db from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
-
+import projectRoutes from "./routes/projectRoutes.js";
+import sceneRoutes from "./routes/sceneRoutes.js";
 
 dotenv.config();
 
@@ -13,7 +14,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/projects", projectRoutes);
 
+app.use("/api/projects/:projectId/scenes", sceneRoutes);
 // ทดสอบ Server
 app.get("/", (req, res) => {
   res.json({
